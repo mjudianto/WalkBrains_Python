@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>Home Page</h1>
+
+{% if request.user.is_authenticated %}
+    <a href="{% url 'logoutUser' %}"> Logout </a>
+{% else %}
+    <a href="{% url 'loginUser'%}"> Login User </a>
+{% endif %}
+
+{% endblock content %}
